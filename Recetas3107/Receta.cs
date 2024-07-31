@@ -8,16 +8,26 @@ namespace Recetas3107
 {
     internal class Receta
     {
-        
-
         public string Nombre { get; set; }
-        public string Ingredientes { get; set; }
-        public string Procedimiento { get; set; }
-        public Receta(string nombre, string ingredientes, string procedimiento)
+        public List<string> Ingredientes { get; set; }
+        public string Instrucciones { get; set; }
+        public Receta(string nombre, List<string> ingredientes, string instrucciones)
         {
             Nombre = nombre;
             Ingredientes = ingredientes;
-            Procedimiento = procedimiento;
+            Instrucciones = instrucciones;
+        }
+
+        public void MostrarReceta()
+        {
+            Console.WriteLine($"Nombre: {Nombre}");
+            Console.WriteLine("Ingredientes: ");
+            foreach (var ingredient in Ingredientes)
+            {
+                Console.WriteLine($"{ingredient}");
+            }
+            Console.WriteLine($"Instrucciones: {Instrucciones}");
         }
     }
+   
 }
