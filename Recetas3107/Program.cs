@@ -43,7 +43,6 @@ class Program
             }
         }
     }
-
     static void AgregarReceta(ColeccionReceta coleccionReceta)
     {
         Console.WriteLine("Ingrese el nombre de la receta:");
