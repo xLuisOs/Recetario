@@ -18,7 +18,7 @@ namespace Recetas3107
         {
             foreach (Receta receta in recetas)
             {
-                if (receta.Nombre == nombre)
+                if (receta.Nombre.ToLower() == nombre.ToLower())
                 {
                     return receta;
                 }
